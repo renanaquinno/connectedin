@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="col-lg-12">
+
+	{% for post in posts %}
+
+
+	
+
+	<div class="panel panel-default">
+
+		<div class="card-body">
+			<div class="panel-heading card-header">
+
+				<h5 class="card-title"><strong>{{post.title_post}}</strong></h5>
+				<p class="card-text">{{post.txt_post}}</p>
+				
+
+			</div>
+
+		</div>
+
+		<div class="panel-heading">
+			<div class="card-footer text-muted">
+				{{post.dt_publicacao}}
+				<p class="card-text">{{post.perfil.nome}}</p>
+			</div>
+		</div>
+
+
+	</div>
+	{% endfor %}
+
+</div>
+{% endblock %}
